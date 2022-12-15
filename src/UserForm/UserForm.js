@@ -17,18 +17,20 @@ const UserForm = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(username, age);
+    props.onAddUser(username, age);
+    setUsername("");
+    setAge("");
   };
 
   return (
     <form onSubmit={formSubmitHandler}>
       <div className={styles["form-control"]}>
         <label>Username</label>
-        <input type="text" onChange={usernameChangeHandler} />
+        <input type="text" value={username} onChange={usernameChangeHandler} />
       </div>
       <div className={styles["form-control"]}>
         <label>Age (Years)</label>
-        <input type="number" min={1} onChange={ageChangeHandler} />
+        <input type="number" value={age} min={1} onChange={ageChangeHandler} />
       </div>
       <Button>Add User</Button>
     </form>

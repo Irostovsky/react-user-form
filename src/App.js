@@ -10,10 +10,22 @@ const defaultUsers = [
 function App() {
   const [users, setUsers] = useState(defaultUsers);
 
+  const addUserHandler = (username, age) => {
+    setUsers((prevUsers) => {
+      const updatedUsers = [...prevUsers];
+      updatedUsers.unshift({
+        username: username,
+        age: age,
+        id: Math.random().toString(),
+      });
+      return updatedUsers;
+    });
+  };
+
   return (
     <div>
       <section className="panel">
-        <UserForm />
+        <UserForm onAddUser={addUserHandler} />
       </section>
       <section className="panel">
         <Users items={users} />
