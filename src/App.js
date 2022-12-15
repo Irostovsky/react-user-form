@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Users from "./Users/Users";
 import "./App.css";
+import UserForm from "./UserForm/UserForm";
 
 const defaultUsers = [
   { id: "user1", username: "John Doe", age: 31 },
@@ -11,7 +12,12 @@ function App() {
 
   return (
     <div>
-      <Users items={users} />
+      <section className="panel">
+        <UserForm />
+      </section>
+      <section className="panel">
+        <Users items={users} />
+      </section>
     </div>
   );
 }
