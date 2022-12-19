@@ -1,9 +1,9 @@
 import { useState } from "react";
-import styles from "./UserForm.module.css";
+import styles from "./AddUser.module.css";
 
 import Button from "../UI/Button/Button";
 
-const UserForm = (props) => {
+const AddUser = (props) => {
   const [username, setUsername] = useState("");
   const [age, setAge] = useState("");
 
@@ -37,4 +37,4 @@ const UserForm = (props) => {
   );
 };
 
-export default UserForm;
+export default AddUser;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Users from "./components/Users/Users";
 import "./App.css";
-import UserForm from "./components/UserForm/UserForm";
+import AddUser from "./components/Users/AddUser";
 
 const defaultUsers = [
   { id: "user1", username: "John Doe", age: 31 },
@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <section className="panel">
-        <UserForm onAddUser={addUserHandler} />
+        <AddUser onAddUser={addUserHandler} />
       </section>
       <section className="panel">
         <Users items={users} />
