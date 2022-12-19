@@ -1,13 +1,11 @@
 html {
   box-sizing: border-box;
+  background: #1f1f1f;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
-body {
-  background-color: black;
 }
 
 .panel {
