@@ -2,6 +2,7 @@ import { useState } from "react";
 import Users from "./components/Users/Users";
 import "./App.css";
 import AddUser from "./components/Users/AddUser";
+import Card from "./components/UI/Card/Card";
 
 const defaultUsers = [
   { id: "user1", username: "John Doe", age: 31 },
@@ -24,12 +25,12 @@ function App() {
 
   return (
     <div>
-      <section className="panel">
+      <Card>
         <AddUser onAddUser={addUserHandler} />
-      </section>
-      <section className="panel">
+      </Card>
+      <Card>
         <Users items={users} />
-      </section>
+      </Card>
     </div>
   );
 }
