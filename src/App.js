@@ -25,9 +25,7 @@ function App() {
 
   return (
     <div>
-      <Card>
-        <AddUser onAddUser={addUserHandler} />
-      </Card>
+      <AddUser onAddUser={addUserHandler} />
       <Card>
         <Users items={users} />
       </Card>

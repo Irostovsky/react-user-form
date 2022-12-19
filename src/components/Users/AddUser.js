@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./AddUser.module.css";
 
 import Button from "../UI/Button/Button";
+import Card from "../UI/Card/Card";
 
 const AddUser = (props) => {
   const [username, setUsername] = useState("");
@@ -23,8 +24,8 @@ const AddUser = (props) => {
   };
 
   return (
-    <form onSubmit={addUserHandler}>
-      <div className={styles["form-control"]}>
+    <Card className={styles.input}>
+      <form onSubmit={addUserHandler}>
         <label htmlFor="username">Username</label>
         <input
           id="username"
@@ -32,8 +33,6 @@ const AddUser = (props) => {
           value={username}
           onChange={usernameChangeHandler}
         />
-      </div>
-      <div className={styles["form-control"]}>
         <label htmlFor="age">Age (Years)</label>
         <input
           id="age"
@@ -42,9 +41,9 @@ const AddUser = (props) => {
           min={1}
           onChange={ageChangeHandler}
         />
-      </div>
-      <Button>Add User</Button>
-    </form>
+        <Button>Add User</Button>
+      </form>
+    </Card>
   );
 };
 

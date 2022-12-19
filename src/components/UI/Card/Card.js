@@ -1,7 +1,11 @@
 import styles from "./Card.module.css";
 
 const Card = (props) => {
-  return <section className={styles.card}>{props.children}</section>;
+  return (
+    <section className={`${styles.card} ${props.className}`}>
+      {props.children}
+    </section>
+  );
 };
 
 export default Card;
