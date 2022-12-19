@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Users from "./Users/Users";
+import Users from "./components/Users/Users";
 import "./App.css";
-import UserForm from "./UserForm/UserForm";
+import UserForm from "./components/UserForm/UserForm";
 
 const defaultUsers = [
   { id: "user1", username: "John Doe", age: 31 },
