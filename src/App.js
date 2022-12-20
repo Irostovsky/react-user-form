@@ -2,7 +2,6 @@ import { useState } from "react";
 import UsersList from "./components/Users/UsersList";
 import "./App.css";
 import AddUser from "./components/Users/AddUser";
-import Card from "./components/UI/Card/Card";
 
 const defaultUsers = [
   { id: "user1", username: "John Doe", age: 31 },
