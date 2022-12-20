@@ -3,12 +3,8 @@ import UsersList from "./components/Users/UsersList";
 import "./App.css";
 import AddUser from "./components/Users/AddUser";
 
-const defaultUsers = [
-  { id: "user1", name: "John Doe", age: 31 },
-  { id: "user2", name: "Mike", age: 32 },
-];
 function App() {
-  const [users, setUsers] = useState(defaultUsers);
+  const [users, setUsers] = useState([]);
 
   const addUserHandler = (username, age) => {
     setUsers((prevUsers) => {
