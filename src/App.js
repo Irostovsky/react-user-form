@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Users from "./components/Users/Users";
+import UsersList from "./components/Users/UsersList";
 import "./App.css";
 import AddUser from "./components/Users/AddUser";
 import Card from "./components/UI/Card/Card";
@@ -26,9 +26,7 @@ function App() {
   return (
     <div>
       <AddUser onAddUser={addUserHandler} />
-      <Card>
-        <Users items={users} />
-      </Card>
+      <UsersList items={users} />
     </div>
   );
 }

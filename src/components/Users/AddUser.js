@@ -18,6 +18,9 @@ const AddUser = (props) => {
 
   const addUserHandler = (event) => {
     event.preventDefault();
+    if (!username.trim() || +age < 1) {
+      return;
+    }
     props.onAddUser(username, age);
     setUsername("");
     setAge("");
@@ -41,7 +44,7 @@ const AddUser = (props) => {
           min={1}
           onChange={ageChangeHandler}
         />
-        <Button>Add User</Button>
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   );
