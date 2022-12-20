@@ -8,13 +8,10 @@ function App() {
 
   const addUserHandler = (username, age) => {
     setUsers((prevUsers) => {
-      const updatedUsers = [...prevUsers];
-      updatedUsers.unshift({
-        name: username,
-        age: age,
-        id: Math.random().toString(),
-      });
-      return updatedUsers;
+      return [
+        ...prevUsers,
+        { name: username, age: age, id: Math.random().toString() },
+      ];
     });
   };
 
